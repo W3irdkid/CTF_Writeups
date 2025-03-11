@@ -1,7 +1,7 @@
 This CTF is designed to guide players through the process step by step by asking questions, which are divided in three separate sections 
 # Reconnaissance 
 - First, I start with an nmap scan
-![nmapscan](images/RootMe1)
+![nmapscan](images/RootMe1.png)
 
 - Thanks to that I can answer first 3 questions in this section 
 - Scan the machine, how many ports are open?
@@ -13,12 +13,12 @@ This CTF is designed to guide players through the process step by step by asking
 
 
 - Now in order to answer next question i have to run gobuster to look for hidden directories
-![gobuster](images/RootMe2)
+![gobuster](images/RootMe2.png)
 - The answer was **/panel** 
 
 # Getting a shell
 After I visit a subsite from last question, I can see:
-![panel-subsite](images/RootMe3)
+![panel-subsite](images/RootMe3.png)
 
 Now I tried to upload a PentestMonkey PHP reverse shell, but the `.php` extension was forbidden, so I tried to add a PHP null byte at the end, or a PHP null byte with .jpg, like `%00` and `%00.jpg`, but even though it was correctly uploaded, the file wasn't executed.
 
@@ -30,7 +30,7 @@ Now I tried to upload a PentestMonkey PHP reverse shell, but the `.php` extensio
     - then CTRL + Z
     - `stty raw -echo; fg'
 - After receiving an interactive shell, I'm going to search for a flag in user.txt.
-![[images/RootMe4.png]]
+  ![usertxt](images/RootMe4.png)
 
 - The next question was
 	- Search for files with SUID permission, which file is weird?
