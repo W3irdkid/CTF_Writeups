@@ -1,6 +1,6 @@
 
 - First things first, so I added, a target IP to my host file and ran a [[Nmap]] scan
-![](images/mr-robot-1.png)
+![nmapscan](images/mr-robot-1.png)
 
 - I could see an Apache server on port 80, so I took a look
 - After visit, I saw some GRUB-like loading booting screen, and welcome message with some option to choose later 
